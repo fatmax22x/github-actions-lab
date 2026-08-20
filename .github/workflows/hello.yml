@@ -4,10 +4,7 @@ on: [push]
 
 jobs:
   build:
-    strategy:
-  matrix:
-    os: [ubuntu-latest, windows-latest, macos-latest]
-runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Echo String
         run: echo "Welcome to GitHub Actions!"
